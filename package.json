@@ -1,9 +1,12 @@
 {
   "name": "hackerrank-solutions",
   "description": "A repository of HackerRank solutions written in Node.js.",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Dylan Westerhold",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^25.2.4"
+  }
 }
