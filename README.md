@@ -1,6 +1,6 @@
 # HackerRank solutions
 
-A repository for [HackerRank](https://www.hackerrank.com/) solutions written in Node.js.
+A repository of [HackerRank](https://www.hackerrank.com/) solutions written in Node.js.
 
 ## Organization
 

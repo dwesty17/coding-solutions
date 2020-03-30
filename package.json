@@ -1,0 +1,9 @@
+{
+  "name": "hackerrank-solutions",
+  "description": "A repository of HackerRank solutions written in Node.js.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dylan Westerhold",
+  "license": "MIT"
+}
