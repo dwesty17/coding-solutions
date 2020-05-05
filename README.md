@@ -1,10 +1,10 @@
-# HackerRank solutions
+# HackerRank & LeetCode solutions
 
-A repository of [HackerRank](https://www.hackerrank.com/) solutions written in Node.js.
+A repository of [HackerRank](https://www.hackerrank.com/) and [LeetCode](https://leetcode.com/) solutions written in Node.js.
 
 ## Organization
 
-The `solutions` directory is a collection of directories that are named after the URL slugs for each problem. Wihtin each of those directories you will find a file with the solution, a test suite, and a README explaning the solution.
+The `solutions` directory is a collection of directories that are named after the URL slugs for each problem. Wihtin each of those directories you will find a file with the solution, a test suite, and a README explaining the solution.
 
 ## How to use this repo
 
