@@ -1,7 +1,7 @@
 const { binaryTreePaths } = require("./binary-tree-paths");
 
 describe("binary-tree-paths", () => {
-  test("Sample test case 0", () => {
+  test("Example test case 1", () => {
     const tree = {
       val: 1,
       left: {
