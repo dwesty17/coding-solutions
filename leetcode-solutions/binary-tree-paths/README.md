@@ -1,4 +1,8 @@
-# Solution
+## Problem
+
+[Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)
+
+## Solution
 
 Implement a recursive function that traverses the left and right subtrees 
 until it reaches a leaf. While traversing the tree build a string representing 

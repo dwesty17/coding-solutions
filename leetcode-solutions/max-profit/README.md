@@ -1,4 +1,8 @@
-# Solution
+## Problem
+
+[Best Time to Buy and Sell Stock II](https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/564/)
+
+## Solution
 
 Iterate over the list of prices and for every price execute two different 
 pieces of logic based on whether or not you already own a stock. If you
