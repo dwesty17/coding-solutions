@@ -1,28 +1,15 @@
-// May 6, 2020
-// https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/564/
+// May 8, 2020
+// https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/646/
 
 /**
- * @param {number[]} prices
- * @return {number}
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {void} Do not return anything, modify nums in-place instead.
  */
-const rotate = (prices) => {
-  let profit = 0;
-  let ownedStockPrice = -1;
-  for (let i = 0; i < prices.length; i++) {
-    const currentStockPrice = prices[i];
-    const nextStockPrice = prices[i + 1];
-
-    if (ownedStockPrice < 0 && nextStockPrice > currentStockPrice) {
-      ownedStockPrice = currentStockPrice;
-    } else if (
-      ownedStockPrice >= 0 &&
-      (currentStockPrice > nextStockPrice || nextStockPrice === undefined)
-    ) {
-      profit += prices[i] - ownedStockPrice;
-      ownedStockPrice = -1;
-    }
-  }
-  return profit;
+const rotate = (nums, k) => {
+  const newStartIndex = k % nums.length;
+  const newStart = nums.splice(nums.length - newStartIndex);
+  nums.splice(0, 0, ...newStart);
 };
 
-module.exports = { maxProfit: rotate };
+module.exports = { rotate };
