@@ -1,6 +1,6 @@
 const { singleNumber } = require("./single-number");
 
-describe("max-profit", () => {
+describe("singleNumber", () => {
   test("Example test case 1", () => {
     const input = [2, 2, 1];
     expect(singleNumber(input)).toBe(1);
