@@ -1,6 +1,6 @@
 {
-  "name": "hackerrank-solutions",
-  "description": "A repository of HackerRank solutions written in Node.js.",
+  "name": "coding-solutions",
+  "description": "A repository of HackerRank & LeetCode solutions written in Node.js.",
   "author": "Dylan Westerhold",
   "license": "MIT",
   "scripts": {
