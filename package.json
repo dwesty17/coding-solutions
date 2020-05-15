@@ -4,9 +4,12 @@
   "author": "Dylan Westerhold",
   "license": "MIT",
   "scripts": {
+    "new-solution": "node scripts/new-solution.js",
     "test": "jest"
   },
   "devDependencies": {
-    "jest": "^25.2.4"
+    "jest": "^25.2.4",
+    "lodash": "4.17.15",
+    "moment": "2.25.3"
   }
 }
