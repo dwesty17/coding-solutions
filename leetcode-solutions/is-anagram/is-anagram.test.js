@@ -7,7 +7,7 @@ describe("isAnagram", () => {
     expect(isAnagram(s, t)).toBe(true);
   });
 
-  test("Example test case 1", () => {
+  test("Example test case 2", () => {
     const s = "rat";
     const t = "car";
     expect(isAnagram(s, t)).toBe(false);

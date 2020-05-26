@@ -7,7 +7,21 @@
  * @return {boolean}
  */
 const isAnagram = (s, t) => {
-  return t === s.split("").join("");
+  if (s.length !== t.length) { return false; }
+
+  const frequencyMap = {};
+
+  for (let i = 0; i < s.length; i++) {
+    frequencyMap[s[i]] ? frequencyMap[s[i]]++ : frequencyMap[s[i]] = 1;
+  }
+
+  for (let i = 0; i < t.length; i++) {
+    if (!frequencyMap[t[i]]) { return false; }
+    else if (frequencyMap[t[i]] === 1) { delete frequencyMap[t[i]] }
+    else { frequencyMap[t[i]]--; }
+  }
+
+  return Object.keys(frequencyMap).length === 0
 };
 
 module.exports = { isAnagram };
