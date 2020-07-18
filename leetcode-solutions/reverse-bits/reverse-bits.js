@@ -6,18 +6,10 @@
  * @return {number} - a positive integer
  */
 const reverseBits = (n) => {
-    let result = 0;
-    let i = 0;
-    while (n > 0) {
-        // Expected 111001011110000010100101000000
-        // Actual   1011010111110000101100011
-        if (n % 2 === 0) {
-            result += Math.pow(2, i);
-        }
-        n = Math.floor(n / 2);
-        i++;
-    }
-    return result;
+    const binaryString = n.toString(2);
+    const reverseBinaryString = binaryString.split("").reverse().join("");
+    const padding = Array(Math.max(32 - reverseBinaryString.length, 0)).fill(0).join("");
+    return parseInt(`${reverseBinaryString}${padding}`, 2);
 };
 
 module.exports = { reverseBits };
