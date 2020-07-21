@@ -55,7 +55,7 @@ const readmeFile = `
 ## Solution
 `.trim();
 
-const dirName = `./${website}-solutions/${kebabCaseSolutionName}`;
+const dirName = `./${website}/${kebabCaseSolutionName}`;
 
 if (fs.existsSync(dirName)) {
   console.error("A solution with that name already exists\n");
