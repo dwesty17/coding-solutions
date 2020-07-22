@@ -6,9 +6,9 @@
  * @return {number[][]}
  */
 const threeSum = (nums) => {
-    const result = [];
+    const results = [];
 
-    if (nums.length < 3) { return result; }
+    if (nums.length < 3) { return results; }
 
     nums.sort((a, b) => a - b);
 
@@ -22,22 +22,22 @@ const threeSum = (nums) => {
         while (j < k) {
             let sum = nums[i] + nums[j] + nums[k];
 
-            if (sum < target) { j++; }
-            if (sum > target) { k++; }
+            if (sum < 0) { j++; }
+            if (sum > 0) { k--; }
 
-            if (sum === target) {
+            if (sum === 0) {
                 results.push([nums[i], nums[j], nums[k]]);
+
+                while (nums[j] === nums[j + 1]) { j++; }
+                while (nums[k] === nums[k - 1]) { k--; }
+
+                j++;
+                k--;
             }
-
-            while (nums[j] === nums[j + 1]) { j++; }
-            while (nums[k] === nums[k - 1]) { k--; }
-
-            j++;
-            k--;
         }
     }
 
-    return result;
+    return results;
 };
 
 module.exports = { threeSum };
