@@ -16,29 +16,22 @@
 const zigzagLevelOrder = (root) => {
     if (!root) { return []; }
 
-    const result = [
-        [ root.val ],
-    ];
-
+    const result = [[ root.val ]];
     const searchQueue = [{ ...root, level: 0 }];
+
+    const processNode = (node, level) => {
+        searchQueue.push({ ...node, level });
+        level % 2 ? result[level].unshift(node.val) : result[level].push(node.val);
+    };
 
     while (searchQueue.length) {
         const currNode = searchQueue.shift();
         const nextLevel = currNode.level + 1;
+        const hasChildren = !!(currNode.left || currNode.right);
 
-        if ((currNode.left || currNode.right) && !result[nextLevel]) {
-            result.push([]);
-        }
-
-        if (currNode.left) {
-            searchQueue.push({ ...currNode.left, level: nextLevel });
-            currNode.level % 2 ? result[nextLevel].push(currNode.left.val) : result[nextLevel].unshift(currNode.left.val);
-        }
-
-        if (currNode.right) {
-            searchQueue.push({ ...currNode.right, level: nextLevel });
-            currNode.level % 2 ? result[nextLevel].push(currNode.right.val) : result[nextLevel].unshift(currNode.right.val);
-        }
+        if (hasChildren && !result[nextLevel]) { result.push([]); }
+        if (currNode.left) { processNode(currNode.left, nextLevel); }
+        if (currNode.right) { processNode(currNode.right, nextLevel); }
     }
 
     return result;
